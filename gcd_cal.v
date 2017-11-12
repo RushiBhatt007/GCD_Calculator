@@ -15,7 +15,7 @@ input[3:0] a;
 input[3:0] b;
 output[3:0] o;
 reg t;
-assign t=0;
+always t=0;
 reg[3:0] c;
 FullAdder F1(a[0],b[0],t,o[0],c[0]);
 FullAdder F2(a[1],b[1],c[0],o[1],c[1]);
@@ -29,15 +29,15 @@ input[3:0] a;
 input[3:0] b;
 output[4:0] o;
 reg[3:0] c;
-assign c=b^1;
+always@(b) c=b^1;
 wire[4:0] d;
 reg[3:0] e;
-assign e[0]=1;
-assign e[1]=0;
-assign e[2]=0;
-assign e[3]=0;
-four_bit_adder(c,e,d);
-four_bit_adder(a,d,o);
+always e[0]=1;
+always e[1]=0;
+always e[2]=0;
+always e[3]=0;
+four_bit_adder f1(c,e,d);
+four_bit_adder f2(a,d,o);
 endmodule
 
 
@@ -69,12 +69,13 @@ endmodule
 module gcd_cal (A,B,C);
 input [3:0] A,B;
 output [3:0] C;
+wire [4:0]sub;
 
 reg [7:0] p;
 wire AgB,BgA,AeB;
 wire m1,m2,m3,m4,m5,m6,m7,m8,m9,m10,m11,m12,m13,m14,m15,m16;
 wire ns0,ns1,ns2,ns3,check,nBgA;
-four_bit_comp (A[0],A[1],A[2],A[3],B[0],B[1],B[2],B[3],AgB,BgA,AeB);
+four_bit_comp f1(A[0],A[1],A[2],A[3],B[0],B[1],B[2],B[3],AgB,BgA,AeB);
 not n0(nBgA,BgA);
 and s1(m1,A[0],nBgA);
 and s2(m2,A[0],BgA);
@@ -103,7 +104,7 @@ or  q8(p[7],m15,m16);
 assign A[3:0]=p[3:0];
 assign B[3:0]=p[7:4];
 
-four_bit_sub (A[3:0],B[3:0],sub[4:0]);
+four_bit_sub f2(A[3:0],B[3:0],sub[4:0]);
 not n1(ns0,sub[0]);
 not n2(ns1,sub[1]);
 not n3(ns2,sub[2]);
