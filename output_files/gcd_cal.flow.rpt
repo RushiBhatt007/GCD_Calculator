@@ -1,5 +1,5 @@
 Flow report for gcd_cal
-Sun Nov 12 18:43:47 2017
+Sun Nov 12 23:06:43 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Flow Summary                                                                ;
 +---------------------------+-------------------------------------------------+
-; Flow Status               ; Flow Failed - Sun Nov 12 18:43:47 2017          ;
+; Flow Status               ; Flow Failed - Sun Nov 12 23:06:43 2017          ;
 ; Quartus II 64-Bit Version ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name             ; gcd_cal                                         ;
 ; Top-level Entity Name     ; gcd_cal                                         ;
@@ -55,7 +55,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/12/2017 18:43:46 ;
+; Start date & time ; 11/12/2017 23:06:43 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; gcd_cal             ;
 +-------------------+---------------------+
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +--------------------------+---------------------------------+---------------+-------------+------------+
 ; Assignment Name          ; Value                           ; Default Value ; Entity Name ; Section Id ;
 +--------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID    ; 233654129459514.151049242606692 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID    ; 233654129459514.151050820313472 ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP   ; 85                              ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP   ; 0                               ; --            ; --          ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY ; output_files                    ; --            ; --          ; --         ;
