@@ -1,5 +1,5 @@
 Flow report for gcd_cal
-Thu Nov 16 17:40:42 2017
+Thu Nov 16 21:34:15 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Flow Summary                                                                ;
 +---------------------------+-------------------------------------------------+
-; Flow Status               ; Successful - Thu Nov 16 17:40:36 2017           ;
+; Flow Status               ; Successful - Thu Nov 16 21:34:15 2017           ;
 ; Quartus II 64-Bit Version ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name             ; gcd_cal                                         ;
 ; Top-level Entity Name     ; gcd_cal                                         ;
@@ -57,22 +57,24 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/16/2017 17:40:09 ;
+; Start date & time ; 11/16/2017 21:33:40 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; gcd_cal             ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                      ;
-+--------------------------+---------------------------------+---------------+-------------+------------+
-; Assignment Name          ; Value                           ; Default Value ; Entity Name ; Section Id ;
-+--------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID    ; 233654135410124.151083420813448 ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP   ; 85                              ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP   ; 0                               ; --            ; --          ; --         ;
-; PROJECT_OUTPUT_DIRECTORY ; output_files                    ; --            ; --          ; --         ;
-+--------------------------+---------------------------------+---------------+-------------+------------+
++-----------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                          ;
++--------------------------+---------------------------------+---------------+-------------+----------------+
+; Assignment Name          ; Value                           ; Default Value ; Entity Name ; Section Id     ;
++--------------------------+---------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID    ; 233654129459514.151084822012848 ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT   ; Verilog Hdl                     ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL      ; ModelSim-Altera (Verilog)       ; <None>        ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP   ; 85                              ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP   ; 0                               ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY ; output_files                    ; --            ; --          ; --             ;
++--------------------------+---------------------------------+---------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -80,11 +82,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 489 MB              ; 00:00:02                           ;
-; Fitter                    ; 00:00:07     ; 1.0                     ; 615 MB              ; 00:00:01                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 435 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 439 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:23     ; --                      ; --                  ; 00:00:05                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 460 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:07     ; 1.0                     ; 613 MB              ; 00:00:01                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 406 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 403 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 362 MB              ; 00:00:00                           ;
+; Total                     ; 00:00:14     ; --                      ; --                  ; 00:00:05                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -93,10 +96,11 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; Rushi            ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; Rushi            ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; Rushi            ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; Rushi            ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; ParthavDell      ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; ParthavDell      ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; ParthavDell      ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; ParthavDell      ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; ParthavDell      ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -107,6 +111,7 @@ quartus_map --read_settings_files=on --write_settings_files=off gcd_cal -c gcd_c
 quartus_fit --read_settings_files=off --write_settings_files=off gcd_cal -c gcd_cal
 quartus_asm --read_settings_files=off --write_settings_files=off gcd_cal -c gcd_cal
 quartus_sta gcd_cal -c gcd_cal
+quartus_eda --read_settings_files=off --write_settings_files=off gcd_cal -c gcd_cal
 
 
 

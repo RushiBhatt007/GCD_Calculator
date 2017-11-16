@@ -1,5 +1,5 @@
 Analysis & Synthesis report for gcd_cal
-Thu Nov 16 17:40:20 2017
+Thu Nov 16 21:33:42 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -47,7 +47,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Nov 16 17:40:20 2017           ;
+; Analysis & Synthesis Status ; Successful - Thu Nov 16 21:33:42 2017           ;
 ; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name               ; gcd_cal                                         ;
 ; Top-level Entity Name       ; gcd_cal                                         ;
@@ -127,18 +127,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                           ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                             ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
-; gcd_cal.v                        ; yes             ; User Verilog HDL File  ; C:/Users/RUSHI/Documents/GitHub/GCD_Calculator/gcd_cal.v ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                               ;
++----------------------------------+-----------------+------------------------+------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------+---------+
+; gcd_cal.v                        ; yes             ; User Verilog HDL File  ; D:/GCD_Calculator/gcd_cal.v  ;         ;
++----------------------------------+-----------------+------------------------+------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------+
@@ -269,7 +269,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Nov 16 17:40:07 2017
+    Info: Processing started: Thu Nov 16 21:33:40 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off gcd_cal -c gcd_cal
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Warning (12090): Entity "mux" obtained from "gcd_cal.v" instead of from Quartus II megafunction library
@@ -295,17 +295,17 @@ Info (21057): Implemented 59 device resources after synthesis - the final resour
     Info (21059): Implemented 4 output pins
     Info (21063): Implemented 38 macrocells
     Info (21073): Implemented 9 shareable expanders
-Info (144001): Generated suppressed messages file C:/Users/RUSHI/Documents/GitHub/GCD_Calculator/output_files/gcd_cal.map.smsg
+Info (144001): Generated suppressed messages file D:/GCD_Calculator/output_files/gcd_cal.map.smsg
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 489 megabytes
-    Info: Processing ended: Thu Nov 16 17:40:20 2017
-    Info: Elapsed time: 00:00:13
+    Info: Peak virtual memory: 460 megabytes
+    Info: Processing ended: Thu Nov 16 21:33:42 2017
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/RUSHI/Documents/GitHub/GCD_Calculator/output_files/gcd_cal.map.smsg.
+The suppressed messages can be found in D:/GCD_Calculator/output_files/gcd_cal.map.smsg.
 
 
