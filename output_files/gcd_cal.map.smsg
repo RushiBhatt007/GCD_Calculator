@@ -1,3 +1,3 @@
-Info (10281): Verilog HDL Declaration information at gcd_cal.v(45): object "a1" differs only in case from object "A1" in the same scope
-Info (10281): Verilog HDL Declaration information at gcd_cal.v(45): object "a2" differs only in case from object "A2" in the same scope
-Info (10281): Verilog HDL Declaration information at gcd_cal.v(45): object "a3" differs only in case from object "A3" in the same scope
+Info (10281): Verilog HDL Declaration information at gcd_cal.v(57): object "a1" differs only in case from object "A1" in the same scope
+Info (10281): Verilog HDL Declaration information at gcd_cal.v(57): object "a2" differs only in case from object "A2" in the same scope
+Info (10281): Verilog HDL Declaration information at gcd_cal.v(57): object "a3" differs only in case from object "A3" in the same scope

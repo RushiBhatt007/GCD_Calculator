@@ -1,0 +1,299 @@
+|gcd_cal
+IN1[0] => IN1[0].IN1
+IN1[1] => IN1[1].IN1
+IN1[2] => IN1[2].IN1
+IN1[3] => IN1[3].IN1
+IN2[0] => IN2[0].IN1
+IN2[1] => IN2[1].IN1
+IN2[2] => IN2[2].IN1
+IN2[3] => IN2[3].IN1
+C[0] <= w1.DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= w2.DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= w3.DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= w4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|mux:M1
+in1 => A1.IN0
+in2 => A2.IN0
+sel => N1.IN0
+sel => A2.IN1
+op <= O1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|mux:M2
+in1 => A1.IN0
+in2 => A2.IN0
+sel => N1.IN0
+sel => A2.IN1
+op <= O1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|mux:M3
+in1 => A1.IN0
+in2 => A2.IN0
+sel => N1.IN0
+sel => A2.IN1
+op <= O1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|mux:M4
+in1 => A1.IN0
+in2 => A2.IN0
+sel => N1.IN0
+sel => A2.IN1
+op <= O1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|mux:M5
+in1 => A1.IN0
+in2 => A2.IN0
+sel => N1.IN0
+sel => A2.IN1
+op <= O1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|mux:M6
+in1 => A1.IN0
+in2 => A2.IN0
+sel => N1.IN0
+sel => A2.IN1
+op <= O1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|mux:M7
+in1 => A1.IN0
+in2 => A2.IN0
+sel => N1.IN0
+sel => A2.IN1
+op <= O1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|mux:M8
+in1 => A1.IN0
+in2 => A2.IN0
+sel => N1.IN0
+sel => A2.IN1
+op <= O1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|four_bit_comp:f1
+a0 => A4.IN0
+a0 => X0.IN0
+a1 => A3.IN0
+a1 => X1.IN0
+a2 => A2.IN0
+a2 => X2.IN0
+a3 => A1.IN0
+a3 => X3.IN0
+b0 => N0.IN0
+b0 => X0.IN1
+b1 => N1.IN0
+b1 => X1.IN1
+b2 => N2.IN0
+b2 => X2.IN1
+b3 => N3.IN0
+b3 => X3.IN1
+o1 <> o1
+o2 <> o2
+o3 <> o3
+
+
+|gcd_cal|mux:M9
+in1 => A1.IN0
+in2 => A2.IN0
+sel => N1.IN0
+sel => A2.IN1
+op <= O1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|mux:M10
+in1 => A1.IN0
+in2 => A2.IN0
+sel => N1.IN0
+sel => A2.IN1
+op <= O1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|mux:M11
+in1 => A1.IN0
+in2 => A2.IN0
+sel => N1.IN0
+sel => A2.IN1
+op <= O1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|mux:M12
+in1 => A1.IN0
+in2 => A2.IN0
+sel => N1.IN0
+sel => A2.IN1
+op <= O1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|mux:M13
+in1 => A1.IN0
+in2 => A2.IN0
+sel => N1.IN0
+sel => A2.IN1
+op <= O1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|mux:M14
+in1 => A1.IN0
+in2 => A2.IN0
+sel => N1.IN0
+sel => A2.IN1
+op <= O1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|mux:M15
+in1 => A1.IN0
+in2 => A2.IN0
+sel => N1.IN0
+sel => A2.IN1
+op <= O1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|mux:M16
+in1 => A1.IN0
+in2 => A2.IN0
+sel => N1.IN0
+sel => A2.IN1
+op <= O1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|four_bit_sub:f2
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => c.IN0
+b[1] => c[1].IN1
+b[2] => c[2].IN1
+b[3] => c[3].IN1
+o[0] <= four_bit_adder:f2.port2
+o[1] <= four_bit_adder:f2.port2
+o[2] <= four_bit_adder:f2.port2
+o[3] <= four_bit_adder:f2.port2
+o[4] <= four_bit_adder:f2.port2
+
+
+|gcd_cal|four_bit_sub:f2|four_bit_adder:f1
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+o[0] <= FullAdder:F1.port3
+o[1] <= FullAdder:F2.port3
+o[2] <= FullAdder:F3.port3
+o[3] <= FullAdder:F4.port3
+
+
+|gcd_cal|four_bit_sub:f2|four_bit_adder:f1|FullAdder:F1
+a => x2.IN0
+a => A1.IN0
+b => x1.IN0
+b => A2.IN0
+c => x1.IN1
+c => A2.IN1
+o1 <= x2.DB_MAX_OUTPUT_PORT_TYPE
+o2 <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|four_bit_sub:f2|four_bit_adder:f1|FullAdder:F2
+a => x2.IN0
+a => A1.IN0
+b => x1.IN0
+b => A2.IN0
+c => x1.IN1
+c => A2.IN1
+o1 <= x2.DB_MAX_OUTPUT_PORT_TYPE
+o2 <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|four_bit_sub:f2|four_bit_adder:f1|FullAdder:F3
+a => x2.IN0
+a => A1.IN0
+b => x1.IN0
+b => A2.IN0
+c => x1.IN1
+c => A2.IN1
+o1 <= x2.DB_MAX_OUTPUT_PORT_TYPE
+o2 <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|four_bit_sub:f2|four_bit_adder:f1|FullAdder:F4
+a => x2.IN0
+a => A1.IN0
+b => x1.IN0
+b => A2.IN0
+c => x1.IN1
+c => A2.IN1
+o1 <= x2.DB_MAX_OUTPUT_PORT_TYPE
+o2 <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|four_bit_sub:f2|four_bit_adder:f2
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+o[0] <= FullAdder:F1.port3
+o[1] <= FullAdder:F2.port3
+o[2] <= FullAdder:F3.port3
+o[3] <= FullAdder:F4.port3
+
+
+|gcd_cal|four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1
+a => x2.IN0
+a => A1.IN0
+b => x1.IN0
+b => A2.IN0
+c => x1.IN1
+c => A2.IN1
+o1 <= x2.DB_MAX_OUTPUT_PORT_TYPE
+o2 <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2
+a => x2.IN0
+a => A1.IN0
+b => x1.IN0
+b => A2.IN0
+c => x1.IN1
+c => A2.IN1
+o1 <= x2.DB_MAX_OUTPUT_PORT_TYPE
+o2 <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3
+a => x2.IN0
+a => A1.IN0
+b => x1.IN0
+b => A2.IN0
+c => x1.IN1
+c => A2.IN1
+o1 <= x2.DB_MAX_OUTPUT_PORT_TYPE
+o2 <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gcd_cal|four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4
+a => x2.IN0
+a => A1.IN0
+b => x1.IN0
+b => A2.IN0
+c => x1.IN1
+c => A2.IN1
+o1 <= x2.DB_MAX_OUTPUT_PORT_TYPE
+o2 <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+

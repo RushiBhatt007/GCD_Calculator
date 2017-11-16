@@ -1,0 +1,449 @@
+Fitter report for gcd_cal
+Thu Nov 16 17:40:29 2017
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Pin-Out File
+  6. Fitter Resource Usage Summary
+  7. Input Pins
+  8. Output Pins
+  9. All Package Pins
+ 10. Output Pin Default Load For Reported TCO
+ 11. Fitter Resource Utilization by Entity
+ 12. Non-Global High Fan-Out Signals
+ 13. Other Routing Usage Summary
+ 14. LAB Macrocells
+ 15. Parallel Expander
+ 16. Shareable Expander
+ 17. Logic Cell Interconnection
+ 18. Fitter Device Options
+ 19. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Fitter Summary                                                              ;
++---------------------------+-------------------------------------------------+
+; Fitter Status             ; Successful - Thu Nov 16 17:40:29 2017           ;
+; Quartus II 64-Bit Version ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name             ; gcd_cal                                         ;
+; Top-level Entity Name     ; gcd_cal                                         ;
+; Family                    ; MAX3000A                                        ;
+; Device                    ; EPM3064ALC44-10                                 ;
+; Timing Models             ; Final                                           ;
+; Total macrocells          ; 38 / 64 ( 59 % )                                ;
+; Total pins                ; 16 / 34 ( 47 % )                                ;
++---------------------------+-------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                              ;
++----------------------------------------------------------------------------+-----------------+---------------+
+; Option                                                                     ; Setting         ; Default Value ;
++----------------------------------------------------------------------------+-----------------+---------------+
+; Device                                                                     ; EPM3064ALC44-10 ;               ;
+; Use smart compilation                                                      ; Off             ; Off           ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On              ; On            ;
+; Enable compact report table                                                ; Off             ; Off           ;
+; Optimize Multi-Corner Timing                                               ; Off             ; Off           ;
+; Optimize Timing for ECOs                                                   ; Off             ; Off           ;
+; Regenerate full fit report during ECO compiles                             ; Off             ; Off           ;
+; Optimize IOC Register Placement for Timing                                 ; Normal          ; Normal        ;
+; Fitter Initial Placement Seed                                              ; 1               ; 1             ;
+; Slow Slew Rate                                                             ; Off             ; Off           ;
+; Fitter Effort                                                              ; Auto Fit        ; Auto Fit      ;
+; Force Fitter to Avoid Periphery Placement Warnings                         ; Off             ; Off           ;
++----------------------------------------------------------------------------+-----------------+---------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------+
+; Pin-Out File ;
++--------------+
+The pin-out file can be found in C:/Users/RUSHI/Documents/GitHub/GCD_Calculator/output_files/gcd_cal.pin.
+
+
++-------------------------------------------------+
+; Fitter Resource Usage Summary                   ;
++------------------------------+------------------+
+; Resource                     ; Usage            ;
++------------------------------+------------------+
+; Logic cells                  ; 38 / 64 ( 59 % ) ;
+; Registers                    ; 0 / 64 ( 0 % )   ;
+; Number of pterms used        ; 157              ;
+; I/O pins                     ; 16 / 34 ( 47 % ) ;
+;     -- Clock pins            ; 0 / 2 ( 0 % )    ;
+;     -- Dedicated input pins  ; 0 / 2 ( 0 % )    ;
+;                              ;                  ;
+; Global signals               ; 0                ;
+; Shareable expanders          ; 12 / 64 ( 19 % ) ;
+; Parallel expanders           ; 16 / 60 ( 27 % ) ;
+; Cells using turbo bit        ; 38 / 64 ( 59 % ) ;
+; Maximum fan-out              ; 25               ;
+; Highest non-global fan-out   ; 25               ;
+; Total fan-out                ; 406              ;
+; Average fan-out              ; 6.15             ;
++------------------------------+------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                  ;
++--------+-------+----------+-----+-----------------------+--------------------+--------+--------------+----------------------+
+; Name   ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; I/O Standard ; Location assigned by ;
++--------+-------+----------+-----+-----------------------+--------------------+--------+--------------+----------------------+
+; IN1[0] ; 41    ; --       ; 4   ; 3                     ; 0                  ; no     ; 3.3-V LVTTL  ; Fitter               ;
+; IN1[1] ; 4     ; --       ; 1   ; 3                     ; 0                  ; no     ; 3.3-V LVTTL  ; Fitter               ;
+; IN1[2] ; 27    ; --       ; 3   ; 3                     ; 0                  ; no     ; 3.3-V LVTTL  ; Fitter               ;
+; IN1[3] ; 28    ; --       ; 3   ; 3                     ; 0                  ; no     ; 3.3-V LVTTL  ; Fitter               ;
+; IN2[0] ; 31    ; --       ; 3   ; 4                     ; 0                  ; no     ; 3.3-V LVTTL  ; Fitter               ;
+; IN2[1] ; 5     ; --       ; 1   ; 1                     ; 0                  ; no     ; 3.3-V LVTTL  ; Fitter               ;
+; IN2[2] ; 16    ; --       ; 2   ; 2                     ; 0                  ; no     ; 3.3-V LVTTL  ; Fitter               ;
+; IN2[3] ; 18    ; --       ; 2   ; 2                     ; 0                  ; no     ; 3.3-V LVTTL  ; Fitter               ;
++--------+-------+----------+-----+-----------------------+--------------------+--------+--------------+----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                              ;
++------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+; Name ; Pin # ; I/O Bank ; LAB ; Output Register ; Slow Slew Rate ; Open Drain ; TRI Primitive ; I/O Standard ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
++------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+; C[0] ; 11    ; --       ; 1   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; Fitter               ; 10 pF ; -                    ; -                   ;
+; C[1] ; 12    ; --       ; 1   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; Fitter               ; 10 pF ; -                    ; -                   ;
+; C[2] ; 8     ; --       ; 1   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; Fitter               ; 10 pF ; -                    ; -                   ;
+; C[3] ; 9     ; --       ; 1   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; Fitter               ; 10 pF ; -                    ; -                   ;
++------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                      ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage ; Dir.   ; I/O Standard ; Voltage ; User Assignment ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; 1        ; 0          ; --       ; GND+           ;        ;              ;         ;                 ;
+; 2        ; 1          ; --       ; GND+           ;        ;              ;         ;                 ;
+; 3        ; 2          ; --       ; VCCINT         ; power  ;              ; 3.3V    ;                 ;
+; 4        ; 3          ; --       ; IN1[1]         ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 5        ; 4          ; --       ; IN2[1]         ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 6        ; 5          ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 7        ; 6          ; --       ; TDI            ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 8        ; 7          ; --       ; C[2]           ; output ; 3.3-V LVTTL  ;         ; N               ;
+; 9        ; 8          ; --       ; C[3]           ; output ; 3.3-V LVTTL  ;         ; N               ;
+; 10       ; 9          ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 11       ; 10         ; --       ; C[0]           ; output ; 3.3-V LVTTL  ;         ; N               ;
+; 12       ; 11         ; --       ; C[1]           ; output ; 3.3-V LVTTL  ;         ; N               ;
+; 13       ; 12         ; --       ; TMS            ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 14       ; 13         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 15       ; 14         ; --       ; VCCIO          ; power  ;              ; 3.3V    ;                 ;
+; 16       ; 15         ; --       ; IN2[2]         ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 17       ; 16         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 18       ; 17         ; --       ; IN2[3]         ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 19       ; 18         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 20       ; 19         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 21       ; 20         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 22       ; 21         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 23       ; 22         ; --       ; VCCINT         ; power  ;              ; 3.3V    ;                 ;
+; 24       ; 23         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 25       ; 24         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 26       ; 25         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 27       ; 26         ; --       ; IN1[2]         ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 28       ; 27         ; --       ; IN1[3]         ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 29       ; 28         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 30       ; 29         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 31       ; 30         ; --       ; IN2[0]         ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 32       ; 31         ; --       ; TCK            ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 33       ; 32         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 34       ; 33         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 35       ; 34         ; --       ; VCCIO          ; power  ;              ; 3.3V    ;                 ;
+; 36       ; 35         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 37       ; 36         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 38       ; 37         ; --       ; TDO            ; output ; 3.3-V LVTTL  ;         ; N               ;
+; 39       ; 38         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 40       ; 39         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 41       ; 40         ; --       ; IN1[0]         ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 42       ; 41         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 43       ; 42         ; --       ; GND+           ;        ;              ;         ;                 ;
+; 44       ; 43         ; --       ; GND+           ;        ;              ;         ;                 ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+Note: Pin directions (input, output or bidir) are based on device operating in user mode.
+
+
++-----------------------------------------------+
+; Output Pin Default Load For Reported TCO      ;
++--------------+-------+------------------------+
+; I/O Standard ; Load  ; Termination Resistance ;
++--------------+-------+------------------------+
+; 3.3-V LVTTL  ; 10 pF ; Not Available          ;
+; 3.3-V LVCMOS ; 10 pF ; Not Available          ;
+; 3.3-V PCI    ; 10 pF ; 25 Ohm (Parallel)      ;
+; 2.5 V        ; 10 pF ; Not Available          ;
++--------------+-------+------------------------+
+Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                   ;
++----------------------------+------------+------+---------------------------------------------------------+--------------+
+; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name                                     ; Library Name ;
++----------------------------+------------+------+---------------------------------------------------------+--------------+
+; |gcd_cal                   ; 38         ; 16   ; |gcd_cal                                                ; work         ;
+;    |four_bit_comp:f1|      ; 6          ; 0    ; |gcd_cal|four_bit_comp:f1                               ; work         ;
+;    |four_bit_sub:f2|       ; 11         ; 0    ; |gcd_cal|four_bit_sub:f2                                ; work         ;
+;       |four_bit_adder:f2|  ; 11         ; 0    ; |gcd_cal|four_bit_sub:f2|four_bit_adder:f2              ; work         ;
+;          |FullAdder:F1|    ; 1          ; 0    ; |gcd_cal|four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1 ; work         ;
+;          |FullAdder:F2|    ; 3          ; 0    ; |gcd_cal|four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2 ; work         ;
+;          |FullAdder:F3|    ; 4          ; 0    ; |gcd_cal|four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3 ; work         ;
+;          |FullAdder:F4|    ; 3          ; 0    ; |gcd_cal|four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4 ; work         ;
+;    |mux:M10|               ; 0          ; 0    ; |gcd_cal|mux:M10                                        ; work         ;
+;    |mux:M11|               ; 0          ; 0    ; |gcd_cal|mux:M11                                        ; work         ;
+;    |mux:M15|               ; 1          ; 0    ; |gcd_cal|mux:M15                                        ; work         ;
+;    |mux:M1|                ; 1          ; 0    ; |gcd_cal|mux:M1                                         ; work         ;
+;    |mux:M2|                ; 1          ; 0    ; |gcd_cal|mux:M2                                         ; work         ;
+;    |mux:M3|                ; 1          ; 0    ; |gcd_cal|mux:M3                                         ; work         ;
+;    |mux:M4|                ; 1          ; 0    ; |gcd_cal|mux:M4                                         ; work         ;
+;    |mux:M5|                ; 4          ; 0    ; |gcd_cal|mux:M5                                         ; work         ;
+;    |mux:M6|                ; 4          ; 0    ; |gcd_cal|mux:M6                                         ; work         ;
+;    |mux:M7|                ; 2          ; 0    ; |gcd_cal|mux:M7                                         ; work         ;
+;    |mux:M8|                ; 2          ; 0    ; |gcd_cal|mux:M8                                         ; work         ;
++----------------------------+------------+------+---------------------------------------------------------+--------------+
+
+
++----------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                ;
++------------------------------------------------------+---------+
+; Name                                                 ; Fan-Out ;
++------------------------------------------------------+---------+
+; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3  ; 25      ;
+; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10 ; 25      ;
+; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3  ; 24      ;
+; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6  ; 24      ;
+; four_bit_comp:f1|R1~9                                ; 24      ;
+; four_bit_comp:f1|X0~0                                ; 24      ;
+; four_bit_comp:f1|X1~0                                ; 24      ;
+; four_bit_comp:f1|X2~0                                ; 24      ;
+; four_bit_comp:f1|X3~0                                ; 24      ;
+; mux:M5|O1~5                                          ; 23      ;
+; mux:M6|O1~5                                          ; 21      ;
+; mux:M7|O1~4                                          ; 18      ;
+; mux:M8|O1~4                                          ; 15      ;
+; mux:M2|O1~3                                          ; 13      ;
+; mux:M1|O1~3                                          ; 12      ;
+; four_bit_comp:f1|R2~2                                ; 7       ;
+; mux:M15|O1~3                                         ; 6       ;
+; mux:M10|O1~4sexp                                     ; 5       ;
+; mux:M4|O1~3                                          ; 5       ;
+; mux:M3|O1~3                                          ; 5       ;
+; IN2[0]                                               ; 4       ;
+; IN1[3]                                               ; 3       ;
+; IN1[2]                                               ; 3       ;
+; IN1[1]                                               ; 3       ;
+; IN1[0]                                               ; 3       ;
+; mux:M11|O1~4sexp                                     ; 3       ;
+; four_bit_comp:f1|R2~0sexp                            ; 3       ;
+; mux:M10|O1~5                                         ; 2       ;
+; a1~3                                                 ; 2       ;
+; IN2[3]                                               ; 2       ;
+; IN2[2]                                               ; 2       ;
+; a1~2sexp                                             ; 2       ;
+; IN2[1]                                               ; 1       ;
+; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~31 ; 1       ;
+; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~25 ; 1       ;
+; mux:M8|O1~11                                         ; 1       ;
+; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~16 ; 1       ;
+; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~10 ; 1       ;
+; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~17 ; 1       ;
+; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~13 ; 1       ;
+; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~7  ; 1       ;
+; mux:M7|O1~11                                         ; 1       ;
+; four_bit_comp:f1|R1~10                               ; 1       ;
+; mux:M6|O1~21                                         ; 1       ;
+; mux:M6|O1~15                                         ; 1       ;
+; mux:M6|O1~10                                         ; 1       ;
+; mux:M5|O1~21                                         ; 1       ;
+; mux:M5|O1~15                                         ; 1       ;
+; mux:M5|O1~10                                         ; 1       ;
+; w1~0                                                 ; 1       ;
+; w4~0                                                 ; 1       ;
+; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~2  ; 1       ;
+; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~1  ; 1       ;
+; w3~0                                                 ; 1       ;
+; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~9  ; 1       ;
+; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~5  ; 1       ;
+; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~2  ; 1       ;
+; w2~0                                                 ; 1       ;
++------------------------------------------------------+---------+
+
+
++-------------------------------------------------+
+; Other Routing Usage Summary                     ;
++-----------------------------+-------------------+
+; Other Routing Resource Type ; Usage             ;
++-----------------------------+-------------------+
+; Output enables              ; 0 / 6 ( 0 % )     ;
+; PIA buffers                 ; 51 / 144 ( 35 % ) ;
++-----------------------------+-------------------+
+
+
++----------------------------------------------------------------------+
+; LAB Macrocells                                                       ;
++----------------------------------------+-----------------------------+
+; Number of Macrocells  (Average = 9.50) ; Number of LABs  (Total = 3) ;
++----------------------------------------+-----------------------------+
+; 0                                      ; 1                           ;
+; 1                                      ; 0                           ;
+; 2                                      ; 0                           ;
+; 3                                      ; 0                           ;
+; 4                                      ; 0                           ;
+; 5                                      ; 0                           ;
+; 6                                      ; 0                           ;
+; 7                                      ; 0                           ;
+; 8                                      ; 1                           ;
+; 9                                      ; 0                           ;
+; 10                                     ; 0                           ;
+; 11                                     ; 0                           ;
+; 12                                     ; 0                           ;
+; 13                                     ; 0                           ;
+; 14                                     ; 1                           ;
+; 15                                     ; 0                           ;
+; 16                                     ; 1                           ;
++----------------------------------------+-----------------------------+
+
+
++---------------------------------------------------------+
+; Parallel Expander                                       ;
++--------------------------+------------------------------+
+; Parallel Expander Length ; Number of Parallel Expanders ;
++--------------------------+------------------------------+
+; 0                        ; 0                            ;
+; 1                        ; 3                            ;
+; 2                        ; 2                            ;
+; 3                        ; 3                            ;
++--------------------------+------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Shareable Expander                                                            ;
++-------------------------------------------------+-----------------------------+
+; Number of shareable expanders  (Average = 3.00) ; Number of LABs  (Total = 2) ;
++-------------------------------------------------+-----------------------------+
+; 0                                               ; 2                           ;
+; 1                                               ; 0                           ;
+; 2                                               ; 0                           ;
+; 3                                               ; 1                           ;
+; 4                                               ; 0                           ;
+; 5                                               ; 0                           ;
+; 6                                               ; 0                           ;
+; 7                                               ; 0                           ;
+; 8                                               ; 0                           ;
+; 9                                               ; 1                           ;
++-------------------------------------------------+-----------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Logic Cell Interconnection                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
++-----+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; LAB ; Logic Cell ; Input                                                                                                                                                                                                                                                                                                                                                                                                                                ; Output                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
++-----+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+;  A  ; LC11       ; mux:M8|O1~11, four_bit_comp:f1|X3~0, four_bit_comp:f1|X2~0, four_bit_comp:f1|X1~0, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9, mux:M8|O1~4, mux:M4|O1~3, IN2[3], a1~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3                                         ; mux:M5|O1~5, four_bit_comp:f1|X3~0, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~1, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~2, w4~0, mux:M8|O1~4, mux:M6|O1~5, mux:M5|O1~10, mux:M5|O1~15, mux:M5|O1~21, mux:M6|O1~10, mux:M6|O1~15, mux:M6|O1~21, four_bit_comp:f1|R1~10, mux:M8|O1~11                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  A  ; LC6        ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, IN1[3], four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3                                                                                                                                                                                                          ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~1, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~2, w4~0, mux:M8|O1~4, mux:M8|O1~11                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
+;  A  ; LC12       ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, IN1[3], four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, mux:M8|O1~4                                                                                                                                                                                             ; mux:M7|O1~4, w2~0, mux:M15|O1~3, w3~0, w4~0, mux:M8|O1~4, w1~0, mux:M7|O1~11, mux:M8|O1~11, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, mux:M10|O1~4sexp, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~5, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~13, four_bit_comp:f1|R2~0sexp, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~7, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~16, mux:M11|O1~4sexp, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~25, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~17, four_bit_comp:f1|R2~2, mux:M10|O1~5                                                                              ;
+;  A  ; LC9        ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~16, mux:M1|O1~3, mux:M5|O1~5, mux:M2|O1~3, mux:M7|O1~4, mux:M6|O1~5, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~1, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~2, mux:M10|O1~4sexp, four_bit_comp:f1|X3~0, four_bit_comp:f1|X2~0, four_bit_comp:f1|X1~0, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9, four_bit_comp:f1|R2~2, mux:M11|O1~4sexp                        ; mux:M5|O1~5, mux:M6|O1~5, four_bit_comp:f1|X3~0, four_bit_comp:f1|X2~0, four_bit_comp:f1|X1~0, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9, mux:M3|O1~3, mux:M2|O1~3, mux:M1|O1~3, mux:M4|O1~3, w4~0, mux:M5|O1~10, mux:M5|O1~15, mux:M5|O1~21, mux:M6|O1~10, mux:M6|O1~15, mux:M6|O1~21, four_bit_comp:f1|R1~10, a1~2sexp, mux:M7|O1~4, mux:M8|O1~4, mux:M7|O1~11, mux:M8|O1~11, a1~3                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  A  ; LC4        ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, four_bit_comp:f1|X3~0, four_bit_comp:f1|X2~0, four_bit_comp:f1|X1~0, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9, mux:M8|O1~4, mux:M4|O1~3                                                                                                                                                                                                                                     ; C[3]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
+;  A  ; LC13       ; mux:M6|O1~5, mux:M1|O1~3, mux:M15|O1~3, mux:M5|O1~5                                                                                                                                                                                                                                                                                                                                                                                  ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~25                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
+;  A  ; LC3        ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3, four_bit_comp:f1|X3~0, four_bit_comp:f1|X2~0, four_bit_comp:f1|X1~0, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9, mux:M5|O1~5, mux:M1|O1~3                                                                                                                                                                                                                                     ; C[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
+;  A  ; LC15       ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~25, mux:M2|O1~3, mux:M1|O1~3, mux:M5|O1~5, mux:M15|O1~3, mux:M6|O1~5, mux:M10|O1~4sexp, four_bit_comp:f1|R2~2, four_bit_comp:f1|X3~0, four_bit_comp:f1|X2~0, four_bit_comp:f1|X1~0, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9                                                                                                                                                   ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
+;  A  ; LC7        ; mux:M15|O1~3, mux:M2|O1~3, mux:M1|O1~3, mux:M5|O1~5, mux:M6|O1~5, mux:M10|O1~4sexp, four_bit_comp:f1|R2~2, four_bit_comp:f1|X3~0, four_bit_comp:f1|X2~0, four_bit_comp:f1|X1~0, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9                                                                                                                                                                                                         ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~16                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
+;  A  ; LC8        ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~10, mux:M15|O1~3, mux:M1|O1~3, mux:M5|O1~5, mux:M7|O1~4, mux:M6|O1~5, mux:M10|O1~4sexp, four_bit_comp:f1|X3~0, four_bit_comp:f1|X2~0, four_bit_comp:f1|X1~0, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9, mux:M11|O1~4sexp                                                                                                                                                        ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ;
+;  A  ; LC10       ; four_bit_comp:f1|X3~0, four_bit_comp:f1|X2~0, four_bit_comp:f1|X1~0, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9, mux:M8|O1~4, mux:M4|O1~3, IN2[3], a1~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3                                                       ; mux:M8|O1~4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
+;  A  ; LC14       ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~31, mux:M2|O1~3, mux:M1|O1~3, mux:M15|O1~3, four_bit_comp:f1|R2~2, four_bit_comp:f1|X3~0, four_bit_comp:f1|X2~0, four_bit_comp:f1|X1~0, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9, mux:M5|O1~5, mux:M6|O1~5, mux:M10|O1~4sexp                                                                                                                                                   ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~17                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
+;  A  ; LC1        ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, four_bit_comp:f1|X3~0, four_bit_comp:f1|X2~0, four_bit_comp:f1|X1~0, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9, mux:M6|O1~5, mux:M2|O1~3                                                                                                                                                                                                                                     ; C[1]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
+;  A  ; LC2        ; four_bit_comp:f1|X3~0, four_bit_comp:f1|X2~0, four_bit_comp:f1|X1~0, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9, mux:M7|O1~4, mux:M3|O1~3                                                                                                                                                                                                                                                                                          ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~17, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~16, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~25, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~31                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
+;  A  ; LC16       ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~17, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~5, mux:M1|O1~3, mux:M5|O1~5, mux:M15|O1~3, mux:M2|O1~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~2, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~9, four_bit_comp:f1|X3~0, four_bit_comp:f1|X2~0, four_bit_comp:f1|X1~0, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9, four_bit_comp:f1|R2~2, mux:M11|O1~4sexp ; mux:M5|O1~5, mux:M6|O1~5, four_bit_comp:f1|X3~0, four_bit_comp:f1|X2~0, four_bit_comp:f1|X1~0, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9, mux:M3|O1~3, mux:M2|O1~3, mux:M1|O1~3, w3~0, mux:M4|O1~3, mux:M5|O1~10, mux:M5|O1~15, mux:M5|O1~21, mux:M6|O1~10, mux:M6|O1~15, mux:M6|O1~21, four_bit_comp:f1|R1~10, a1~2sexp, mux:M7|O1~4, mux:M8|O1~4, mux:M7|O1~11, mux:M8|O1~11, a1~3                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  A  ; LC5        ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, four_bit_comp:f1|X3~0, four_bit_comp:f1|X2~0, four_bit_comp:f1|X1~0, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9, mux:M7|O1~4, mux:M3|O1~3                                                                                                                                                                                                                                    ; C[2]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
+;  B  ; LC22       ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, IN1[2], four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, mux:M7|O1~4                                                                                                                                                                                             ; mux:M7|O1~4, w2~0, mux:M15|O1~3, w3~0, w4~0, mux:M8|O1~4, w1~0, mux:M7|O1~11, mux:M8|O1~11, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, mux:M10|O1~4sexp, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~5, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~13, four_bit_comp:f1|R2~0sexp, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~7, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~16, mux:M11|O1~4sexp, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~25, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~17, four_bit_comp:f1|R2~2, mux:M10|O1~5                                                                              ;
+;  B  ; LC32       ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, IN1[1], four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, mux:M6|O1~5                                                                                                                                                                                             ; mux:M7|O1~4, w2~0, mux:M15|O1~3, w3~0, w4~0, mux:M8|O1~4, w1~0, mux:M7|O1~11, mux:M8|O1~11, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, mux:M10|O1~4sexp, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~5, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~13, four_bit_comp:f1|R2~0sexp, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~7, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~16, mux:M11|O1~4sexp, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~25, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~17, four_bit_comp:f1|R2~2, mux:M10|O1~5                                                                              ;
+;  B  ; LC31       ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, IN1[0], four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3, mux:M5|O1~5                                                                                                                                                                                             ; mux:M7|O1~4, w2~0, mux:M15|O1~3, w3~0, w4~0, mux:M8|O1~4, w1~0, mux:M7|O1~11, mux:M8|O1~11, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, mux:M10|O1~4sexp, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~5, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~13, four_bit_comp:f1|R2~0sexp, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~7, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~16, mux:M11|O1~4sexp, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~25, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~17, four_bit_comp:f1|R2~2, mux:M10|O1~5                                                                              ;
+;  B  ; LC29       ; four_bit_comp:f1|R1~10, mux:M7|O1~4, IN1[2], four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, mux:M6|O1~5, IN1[1], four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, mux:M5|O1~5, IN1[0]                                                                                                                           ; mux:M7|O1~4, w2~0, mux:M15|O1~3, w3~0, w4~0, mux:M8|O1~4, w1~0, mux:M7|O1~11, mux:M8|O1~11, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, mux:M10|O1~4sexp, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~5, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~13, four_bit_comp:f1|R2~0sexp, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~7, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~16, mux:M11|O1~4sexp, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~25, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~17, four_bit_comp:f1|R2~2, mux:M10|O1~5                                                                              ;
+;  B  ; LC26       ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, IN1[2], four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10                                                                                                                                                                                                          ; mux:M7|O1~4, mux:M15|O1~3, w3~0, mux:M7|O1~11, mux:M11|O1~4sexp                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ;
+;  B  ; LC25       ; mux:M7|O1~11, four_bit_comp:f1|X3~0, four_bit_comp:f1|X2~0, four_bit_comp:f1|X1~0, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9, mux:M7|O1~4, mux:M3|O1~3, IN2[2], a1~2sexp, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3                                     ; mux:M5|O1~5, four_bit_comp:f1|X2~0, four_bit_comp:f1|R1~9, mux:M7|O1~4, mux:M6|O1~5, mux:M15|O1~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~9, w3~0, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, mux:M5|O1~10, mux:M5|O1~15, mux:M5|O1~21, mux:M6|O1~10, mux:M6|O1~15, mux:M6|O1~21, four_bit_comp:f1|R1~10, mux:M7|O1~11, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~16                                                                                                                                                                                                                                                                                                                                                                                                                                   ;
+;  B  ; LC21       ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, IN1[1], four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6                                                                                                                                                                                                          ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, w2~0, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~2, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~7, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~13, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~17, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~10, mux:M10|O1~4sexp, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~5, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~25, mux:M10|O1~5                                                                                                                                                                                                                                         ;
+;  B  ; LC17       ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, IN1[0], four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3                                                                                                                                                                                                          ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3, w1~0, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~7, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~13, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~17, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~16, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~25, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~31                                                                                                                                                                                                                  ;
+;  B  ; LC20       ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~13, mux:M2|O1~3, mux:M1|O1~3, mux:M6|O1~5, mux:M5|O1~5, four_bit_comp:f1|X3~0, four_bit_comp:f1|X2~0, four_bit_comp:f1|X1~0, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9, four_bit_comp:f1|R2~0sexp                                                                                                                                                                               ; mux:M5|O1~5, mux:M6|O1~5, four_bit_comp:f1|X3~0, four_bit_comp:f1|X2~0, four_bit_comp:f1|X1~0, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9, mux:M3|O1~3, mux:M2|O1~3, mux:M1|O1~3, w2~0, mux:M4|O1~3, mux:M5|O1~15, mux:M5|O1~21, mux:M6|O1~10, mux:M6|O1~15, mux:M6|O1~21, four_bit_comp:f1|R1~10, a1~2sexp, mux:M7|O1~4, mux:M8|O1~4, mux:M7|O1~11, mux:M8|O1~11, a1~3                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
+;  B  ; LC28       ; mux:M8|O1~4, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, IN1[3], four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, mux:M7|O1~4                                                                                                                                                                                ; four_bit_comp:f1|R1~9                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
+;  B  ; LC24       ; four_bit_comp:f1|X3~0, four_bit_comp:f1|X2~0, four_bit_comp:f1|X1~0, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9, mux:M7|O1~4, mux:M3|O1~3, IN2[2], a1~2sexp, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3                                                   ; mux:M7|O1~4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
+;  B  ; LC18       ; mux:M2|O1~3, mux:M1|O1~3, mux:M6|O1~5, mux:M5|O1~5, mux:M10|O1~5, four_bit_comp:f1|R2~0sexp, four_bit_comp:f1|X3~0, four_bit_comp:f1|X2~0, four_bit_comp:f1|X1~0, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9                                                                                                                                                                                                                       ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~13                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
+;  B  ; LC19       ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~7, mux:M2|O1~3, mux:M1|O1~3, mux:M6|O1~5, mux:M5|O1~5, mux:M10|O1~5, four_bit_comp:f1|X3~0, four_bit_comp:f1|X2~0, four_bit_comp:f1|X1~0, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9, four_bit_comp:f1|R2~0sexp                                                                                                                                                                  ; four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ;
+;  B  ; LC30       ; mux:M5|O1~5, mux:M1|O1~3                                                                                                                                                                                                                                                                                                                                                                                                             ; mux:M6|O1~5, four_bit_comp:f1|X3~0, four_bit_comp:f1|X2~0, four_bit_comp:f1|X1~0, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9, mux:M3|O1~3, mux:M2|O1~3, mux:M1|O1~3, mux:M4|O1~3, mux:M5|O1~5, w1~0, mux:M5|O1~10, mux:M5|O1~15, mux:M6|O1~10, mux:M6|O1~15, mux:M6|O1~21, four_bit_comp:f1|R1~10, a1~2sexp, mux:M7|O1~4, mux:M8|O1~4, mux:M7|O1~11, mux:M8|O1~11, a1~3                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
+;  C  ; LC36       ; mux:M6|O1~21, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, IN2[1], mux:M5|O1~5, mux:M7|O1~4, mux:M6|O1~5, mux:M8|O1~4                                                                                                                                        ; mux:M5|O1~5, mux:M6|O1~5, four_bit_comp:f1|X1~0, four_bit_comp:f1|R1~9, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, w2~0, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~5, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, mux:M5|O1~10, mux:M5|O1~15, mux:M5|O1~21, mux:M6|O1~10, mux:M6|O1~15, mux:M6|O1~21, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~7, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~13, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~17, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~16, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~25, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~31                                                                                                            ;
+;  C  ; LC34       ; mux:M6|O1~10, mux:M5|O1~5, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, mux:M7|O1~4, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, mux:M8|O1~4, mux:M6|O1~5, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3                                                                                                                                                ; mux:M6|O1~21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
+;  C  ; LC35       ; mux:M6|O1~15, mux:M8|O1~4, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, mux:M7|O1~4, mux:M6|O1~5, mux:M5|O1~5, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10                                                                                                                                                ; mux:M6|O1~5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
+;  C  ; LC37       ; IN2[0], four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, mux:M8|O1~4, mux:M7|O1~4, mux:M6|O1~5, mux:M5|O1~5                                                                                                                                                                                                           ; mux:M5|O1~15                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
+;  C  ; LC38       ; mux:M5|O1~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3, mux:M5|O1~5, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, mux:M6|O1~5, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, mux:M8|O1~4, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, mux:M7|O1~4, IN2[0]                                                                                                                                        ; mux:M5|O1~21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
+;  C  ; LC39       ; mux:M5|O1~15, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, mux:M8|O1~4, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, mux:M7|O1~4, mux:M6|O1~5, mux:M5|O1~5, IN2[0]                                                                                                                                                                                             ; mux:M5|O1~5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
+;  C  ; LC33       ; mux:M8|O1~4, mux:M7|O1~4, mux:M6|O1~5, mux:M5|O1~5, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6                                                                                                                                                              ; mux:M6|O1~15                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
+;  C  ; LC40       ; mux:M5|O1~21, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, mux:M8|O1~4, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, mux:M7|O1~4, mux:M6|O1~5, mux:M5|O1~5, IN2[0], four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3                                                                                                                                        ; mux:M5|O1~5, mux:M6|O1~5, four_bit_comp:f1|X0~0, four_bit_comp:f1|R1~9, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~6, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~2, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~3, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F1|x2~3, w1~0, mux:M5|O1~15, mux:M5|O1~21, mux:M6|O1~10, mux:M6|O1~15, mux:M6|O1~21, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~7, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F2|x2~13, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~17, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~10, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F4|x2~16, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~25, four_bit_sub:f2|four_bit_adder:f2|FullAdder:F3|x2~31, mux:M5|O1~10 ;
++-----+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Fitter Device Options                                         ;
++----------------------------------------------+----------------+
+; Option                                       ; Setting        ;
++----------------------------------------------+----------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off            ;
+; Enable device-wide reset (DEV_CLRn)          ; Off            ;
+; Enable device-wide output enable (DEV_OE)    ; Off            ;
+; Enable INIT_DONE output                      ; Off            ;
+; Configuration scheme                         ; Passive Serial ;
+; Security bit                                 ; Off            ;
+; Base pin-out file on sameframe device        ; Off            ;
++----------------------------------------------+----------------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (119006): Selected device EPM3064ALC44-10 for design "gcd_cal"
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 615 megabytes
+    Info: Processing ended: Thu Nov 16 17:40:29 2017
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:01
+
+
