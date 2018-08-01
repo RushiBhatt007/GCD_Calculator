@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\GCD_Calculator\simulation\modelsim
+vgcd_cal
+!i10b 1
+!s100 <jU<84ke^mblG4HV48g_X3
+Ie?31I5:=g1:kDo9Bc<2c90
+VNzK1JjMA31TPIoC4CFZlo3
+Z1 dD:\GCD_Calculator\simulation\modelsim
+w1510848255
+8gcd_cal.vo
+Fgcd_cal.vo
+L0 31
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1510848478.499000
+!s107 gcd_cal.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|gcd_cal.vo|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+. -O0

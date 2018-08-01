@@ -1,5 +1,9 @@
 TimeQuest Timing Analyzer report for gcd_cal
+<<<<<<< HEAD
 Thu Nov 16 18:54:03 2017
+=======
+Thu Nov 16 21:34:07 2017
+>>>>>>> da9848d00cb7dd525e94997832a580413fbb7e72
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -64,7 +68,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -207,7 +211,11 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+<<<<<<< HEAD
     Info: Processing started: Thu Nov 16 18:54:01 2017
+=======
+    Info: Processing started: Thu Nov 16 21:34:05 2017
+>>>>>>> da9848d00cb7dd525e94997832a580413fbb7e72
 Info: Command: quartus_sta gcd_cal -c gcd_cal
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -264,6 +272,7 @@ Warning (332125): Found combinational loop of 352 nodes
     Warning (332126): Node "f2|f2|F3|x2~1|dataout"
     Warning (332126): Node "M6|O1~10|[5]"
     Warning (332126): Node "M6|O1~15|[6]"
+<<<<<<< HEAD
     Warning (332126): Node "M6|O1~5|[5]"
     Warning (332126): Node "M15|O1~9|[5]"
     Warning (332126): Node "M15|O1~13|[3]"
@@ -279,6 +288,100 @@ Warning (332125): Found combinational loop of 352 nodes
     Warning (332126): Node "M6|O1~10|[1]"
     Warning (332126): Node "M6|O1~15|[3]"
     Warning (332126): Node "M6|O1~5|[7]"
+=======
+    Warning (332126): Node "M6|O1~21|[4]"
+    Warning (332126): Node "M6|O1~5|[5]"
+    Warning (332126): Node "f1|X1~0|[5]"
+    Warning (332126): Node "f1|X1~0|dataout"
+    Warning (332126): Node "f2|f2|F2|x2~7|[8]"
+    Warning (332126): Node "f2|f2|F2|x2~13|[7]"
+    Warning (332126): Node "M10|O1~5|datain[2]"
+    Warning (332126): Node "f1|R2~0sexp|datain[2]"
+    Warning (332126): Node "f2|f2|F2|x2~6|[6]"
+    Warning (332126): Node "f2|f2|F3|x2~25|[6]"
+    Warning (332126): Node "f2|f2|F3|x2~17|[9]"
+    Warning (332126): Node "f2|f2|F3|x2~5|datain[3]"
+    Warning (332126): Node "f2|f2|F3|x2~10|[9]"
+    Warning (332126): Node "M15|O1~3|[2]"
+    Warning (332126): Node "f2|f2|F4|x2~10|[9]"
+    Warning (332126): Node "f2|f2|F4|x2~16|[8]"
+    Warning (332126): Node "f1|R2~2|datain[2]"
+    Warning (332126): Node "f2|f2|F4|x2~3|[10]"
+    Warning (332126): Node "M11|O1~4sexp|datain[2]"
+    Warning (332126): Node "M10|O1~4sexp|datain[2]"
+    Warning (332126): Node "M7|O1~11|[2]"
+    Warning (332126): Node "M7|O1~4|[2]"
+    Warning (332126): Node "M8|O1~11|[2]"
+    Warning (332126): Node "M8|O1~4|[2]"
+    Warning (332126): Node "M6|O1~15|[5]"
+    Warning (332126): Node "M6|O1~21|[0]"
+    Warning (332126): Node "M6|O1~5|[6]"
+    Warning (332126): Node "f1|X3~0|[5]"
+    Warning (332126): Node "f1|X3~0|dataout"
+    Warning (332126): Node "f2|f2|F2|x2~7|[6]"
+    Warning (332126): Node "f2|f2|F2|x2~13|[5]"
+    Warning (332126): Node "M10|O1~5|datain[0]"
+    Warning (332126): Node "f1|R2~0sexp|datain[0]"
+    Warning (332126): Node "f2|f2|F2|x2~6|[4]"
+    Warning (332126): Node "f2|f2|F3|x2~25|[4]"
+    Warning (332126): Node "f2|f2|F3|x2~17|[7]"
+    Warning (332126): Node "f2|f2|F3|x2~5|datain[1]"
+    Warning (332126): Node "f2|f2|F3|x2~10|[7]"
+    Warning (332126): Node "M15|O1~3|[0]"
+    Warning (332126): Node "f2|f2|F4|x2~10|[7]"
+    Warning (332126): Node "f2|f2|F4|x2~16|[6]"
+    Warning (332126): Node "f1|R2~2|datain[0]"
+    Warning (332126): Node "f2|f2|F4|x2~3|[8]"
+    Warning (332126): Node "M11|O1~4sexp|datain[0]"
+    Warning (332126): Node "M10|O1~4sexp|datain[0]"
+    Warning (332126): Node "M7|O1~11|[0]"
+    Warning (332126): Node "M8|O1~11|[0]"
+    Warning (332126): Node "M8|O1~4|[0]"
+    Warning (332126): Node "M7|O1~4|[0]"
+    Warning (332126): Node "M8|O1~4|[4]"
+    Warning (332126): Node "f1|R1~9|[0]"
+    Warning (332126): Node "M6|O1~10|[1]"
+    Warning (332126): Node "M6|O1~15|[3]"
+    Warning (332126): Node "M6|O1~21|[3]"
+    Warning (332126): Node "M6|O1~5|[8]"
+    Warning (332126): Node "f1|X2~0|[5]"
+    Warning (332126): Node "f1|X2~0|dataout"
+    Warning (332126): Node "f2|f2|F2|x2~7|[7]"
+    Warning (332126): Node "f2|f2|F2|x2~13|[6]"
+    Warning (332126): Node "M10|O1~5|datain[1]"
+    Warning (332126): Node "f1|R2~0sexp|datain[1]"
+    Warning (332126): Node "f2|f2|F2|x2~6|[5]"
+    Warning (332126): Node "f2|f2|F3|x2~25|[5]"
+    Warning (332126): Node "f2|f2|F3|x2~17|[8]"
+    Warning (332126): Node "f2|f2|F3|x2~5|datain[2]"
+    Warning (332126): Node "f2|f2|F3|x2~10|[8]"
+    Warning (332126): Node "M15|O1~3|[1]"
+    Warning (332126): Node "f2|f2|F4|x2~10|[8]"
+    Warning (332126): Node "f2|f2|F4|x2~16|[7]"
+    Warning (332126): Node "f1|R2~2|datain[1]"
+    Warning (332126): Node "f2|f2|F4|x2~3|[9]"
+    Warning (332126): Node "M11|O1~4sexp|datain[1]"
+    Warning (332126): Node "M10|O1~4sexp|datain[1]"
+    Warning (332126): Node "M7|O1~11|[1]"
+    Warning (332126): Node "M7|O1~4|[1]"
+    Warning (332126): Node "M8|O1~11|[1]"
+    Warning (332126): Node "M8|O1~4|[1]"
+    Warning (332126): Node "f2|f2|F4|x2~3|[3]"
+    Warning (332126): Node "M7|O1~4|[9]"
+    Warning (332126): Node "a1~2sexp|datain[0]"
+    Warning (332126): Node "a1~2sexp|dataout"
+    Warning (332126): Node "M7|O1~11|[8]"
+    Warning (332126): Node "M7|O1~4|[8]"
+    Warning (332126): Node "f1|X3~0|[0]"
+    Warning (332126): Node "M8|O1~11|[9]"
+    Warning (332126): Node "M8|O1~4|[9]"
+    Warning (332126): Node "a1~3|datain[0]"
+    Warning (332126): Node "a1~3|dataout"
+    Warning (332126): Node "M8|O1~11|[8]"
+    Warning (332126): Node "M8|O1~4|[8]"
+    Warning (332126): Node "M4|O1~3|[0]"
+    Warning (332126): Node "M4|O1~3|dataout"
+>>>>>>> da9848d00cb7dd525e94997832a580413fbb7e72
     Warning (332126): Node "f2|f2|F4|x2~2|datain[1]"
     Warning (332126): Node "f2|f2|F4|x2~1|datain[1]"
     Warning (332126): Node "M15|O1~9|[2]"
@@ -399,6 +502,7 @@ Warning (332125): Found combinational loop of 352 nodes
     Warning (332126): Node "M6|O1~10|[3]"
     Warning (332126): Node "M6|O1~15|[2]"
     Warning (332126): Node "M6|O1~5|[1]"
+<<<<<<< HEAD
     Warning (332126): Node "M4|O1~5|[1]"
     Warning (332126): Node "M15|O1~9|[3]"
     Warning (332126): Node "M15|O1~13|[1]"
@@ -571,6 +675,30 @@ Warning (332125): Found combinational loop of 352 nodes
     Warning (332126): Node "M7|O1~5|[6]"
     Warning (332126): Node "M6|O1~5|[2]"
 Critical Warning (332081): Design contains combinational loop of 352 nodes. Estimating the delays through the loop.
+=======
+    Warning (332126): Node "f1|X2~0|[1]"
+    Warning (332126): Node "M3|O1~3|[1]"
+    Warning (332126): Node "M1|O1~3|[0]"
+    Warning (332126): Node "M5|O1~5|[2]"
+    Warning (332126): Node "f2|f2|F2|x2~13|[3]"
+    Warning (332126): Node "f2|f2|F2|x2~6|[3]"
+    Warning (332126): Node "f2|f2|F3|x2~31|[3]"
+    Warning (332126): Node "f2|f2|F3|x2~25|[9]"
+    Warning (332126): Node "f2|f2|F3|x2~17|[2]"
+    Warning (332126): Node "f2|f2|F3|x2~10|[2]"
+    Warning (332126): Node "f2|f2|F3|x2~2|datain[1]"
+    Warning (332126): Node "f2|f2|F4|x2~10|[3]"
+    Warning (332126): Node "f2|f2|F4|x2~16|[2]"
+    Warning (332126): Node "f1|R1~9|[8]"
+    Warning (332126): Node "f1|X0~0|[5]"
+    Warning (332126): Node "M6|O1~10|[3]"
+    Warning (332126): Node "M6|O1~15|[0]"
+    Warning (332126): Node "M6|O1~21|[5]"
+    Warning (332126): Node "M6|O1~5|[7]"
+    Warning (332126): Node "f2|f2|F4|x2~3|[1]"
+    Warning (332126): Node "f2|f2|F1|x2~3|[0]"
+Critical Warning (332081): Design contains combinational loop of 395 nodes. Estimating the delays through the loop.
+>>>>>>> da9848d00cb7dd525e94997832a580413fbb7e72
 Warning (332068): No clocks defined in design.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info (332159): No clocks to report
@@ -583,9 +711,15 @@ Info (332140): No Minimum Pulse Width paths to report
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
+<<<<<<< HEAD
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 358 warnings
     Info: Peak virtual memory: 439 megabytes
     Info: Processing ended: Thu Nov 16 18:54:03 2017
+=======
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 401 warnings
+    Info: Peak virtual memory: 403 megabytes
+    Info: Processing ended: Thu Nov 16 21:34:07 2017
+>>>>>>> da9848d00cb7dd525e94997832a580413fbb7e72
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
