@@ -1,5 +1,5 @@
 |gcd_cal
-IN1[0] => IN1[0].IN1
+IN1[0] => ~NO_FANOUT~
 IN1[1] => IN1[1].IN1
 IN1[2] => IN1[2].IN1
 IN1[3] => IN1[3].IN1
@@ -11,14 +11,6 @@ C[0] <= w1.DB_MAX_OUTPUT_PORT_TYPE
 C[1] <= w2.DB_MAX_OUTPUT_PORT_TYPE
 C[2] <= w3.DB_MAX_OUTPUT_PORT_TYPE
 C[3] <= w4.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|gcd_cal|mux:M1
-in1 => A1.IN0
-in2 => A2.IN0
-sel => N1.IN0
-sel => A2.IN1
-op <= O1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |gcd_cal|mux:M2

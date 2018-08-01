@@ -88,8 +88,27 @@ wire [7:0] p;
 wire AgB,BgA,AeB;		//store output from comparator
 wire n01,n02,n03,n04,n05,n06,n07,n08;
 wire ns0,ns1,ns2,ns3,check;
+/**
+integer i=0;
+if(i==0)
+begin
+four_bit_comp f001(IN1[0],IN1[1],IN1[2],IN1[3],IN2[0],IN2[1],IN2[2],IN2[3],AgB,BgA,AeB);
+mux M17(IN1[0],IN2[0],BgA,p[0]);
+mux M18(IN1[1],IN2[1],BgA,p[1]);
+mux M19(IN1[2],IN2[2],BgA,p[2]);
+mux M20(IN1[3],IN2[3],BgA,p[3]);
 
-mux M1(IN1[0],n01,check,A[0]);
+mux M21(IN2[0],IN1[0],BgA,p[4]);
+mux M22(IN2[1],IN1[1],BgA,p[5]);
+mux M23(IN2[2],IN1[2],BgA,p[6]);
+mux M24(IN2[3],IN1[3],BgA,p[7]);
+assign i=i+1;
+end
+
+elsealways@(check) check =1;
+
+begin
+**/
 mux M2(IN1[1],n02,check,A[1]);
 mux M3(IN1[2],n03,check,A[2]);
 mux M4(IN1[3],n04,check,A[3]);
@@ -97,6 +116,7 @@ mux M5(IN2[0],n05,check,B[0]);
 mux M6(IN2[1],n06,check,B[1]);
 mux M7(IN2[2],n07,check,B[2]);
 mux M8(IN2[3],n08,check,B[3]);
+
 
 four_bit_comp f1(A[0],A[1],A[2],A[3],B[0],B[1],B[2],B[3],AgB,BgA,AeB);
 mux M9(A[0],B[0],BgA,p[0]);
@@ -114,12 +134,14 @@ not n1(ns0,sub[0]);
 not n2(ns1,sub[1]);
 not n3(ns2,sub[2]);
 not n4(ns3,sub[3]);
+
+//to show valid output		
 and w1(C[0],ns0,p[4]);
 and w2(C[1],ns1,p[5]);
 and w3(C[2],ns2,p[6]);
 and w4(C[3],ns3,p[7]);
 
-nand a1(check,ns0,ns1,ns2,ns3);		//check is 0 when sub is 0000,else check is 1
+nand a1(check,ns0,ns1,ns2,ns3);  //check is 0 when sub is 0000,else check is 1
 //transferring updated values
 and a2(n01,check,sub[0]);
 and a3(n02,check,sub[1]);
@@ -130,6 +152,19 @@ and a6(n05,check,p[4]);
 and a7(n06,check,p[5]);
 and a8(n07,check,p[6]);
 and a9(n08,check,p[7]);
-
 endmodule
 
+/**
+//edit
+module gcd_cal(); 			// Testbench has no inputs, outputs
+reg [3:0] IN1,IN2; 			// Will be assigned in initial block
+wire [3:0] C;					// instantiate device under test
+gcd_cal1 (.IN1(IN1),.IN2(IN2), .C(C));
+
+always IN1=4'b1110;
+always IN2=4'b1110;
+initial begin
+$monitor("C is %b",C);
+end
+endmodule
+**/

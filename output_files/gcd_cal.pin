@@ -71,12 +71,12 @@ TDI                          : 7         : input  : 3.3-V LVTTL       :         
 C[2]                         : 8         : output : 3.3-V LVTTL       :         :           : N              
 C[3]                         : 9         : output : 3.3-V LVTTL       :         :           : N              
 GND                          : 10        : gnd    :                   :         :           :                
-C[0]                         : 11        : output : 3.3-V LVTTL       :         :           : N              
-C[1]                         : 12        : output : 3.3-V LVTTL       :         :           : N              
+C[1]                         : 11        : output : 3.3-V LVTTL       :         :           : N              
+RESERVED                     : 12        :        :                   :         :           :                
 TMS                          : 13        : input  : 3.3-V LVTTL       :         :           : N              
-RESERVED                     : 14        :        :                   :         :           :                
+IN2[2]                       : 14        : input  : 3.3-V LVTTL       :         :           : N              
 VCCIO                        : 15        : power  :                   : 3.3V    :           :                
-IN2[2]                       : 16        : input  : 3.3-V LVTTL       :         :           : N              
+C[0]                         : 16        : output : 3.3-V LVTTL       :         :           : N              
 GND                          : 17        : gnd    :                   :         :           :                
 IN2[3]                       : 18        : input  : 3.3-V LVTTL       :         :           : N              
 RESERVED                     : 19        :        :                   :         :           :                
@@ -87,21 +87,21 @@ VCCINT                       : 23        : power  :                   : 3.3V    
 RESERVED                     : 24        :        :                   :         :           :                
 RESERVED                     : 25        :        :                   :         :           :                
 RESERVED                     : 26        :        :                   :         :           :                
-IN1[2]                       : 27        : input  : 3.3-V LVTTL       :         :           : N              
-IN1[3]                       : 28        : input  : 3.3-V LVTTL       :         :           : N              
+RESERVED                     : 27        :        :                   :         :           :                
+IN1[2]                       : 28        : input  : 3.3-V LVTTL       :         :           : N              
 RESERVED                     : 29        :        :                   :         :           :                
 GND                          : 30        : gnd    :                   :         :           :                
-IN2[0]                       : 31        : input  : 3.3-V LVTTL       :         :           : N              
+IN1[0]                       : 31        : input  : 3.3-V LVTTL       :         :           : N              
 TCK                          : 32        : input  : 3.3-V LVTTL       :         :           : N              
 RESERVED                     : 33        :        :                   :         :           :                
-RESERVED                     : 34        :        :                   :         :           :                
+IN2[0]                       : 34        : input  : 3.3-V LVTTL       :         :           : N              
 VCCIO                        : 35        : power  :                   : 3.3V    :           :                
 GND                          : 36        : gnd    :                   :         :           :                
 RESERVED                     : 37        :        :                   :         :           :                
 TDO                          : 38        : output : 3.3-V LVTTL       :         :           : N              
 RESERVED                     : 39        :        :                   :         :           :                
 RESERVED                     : 40        :        :                   :         :           :                
-IN1[0]                       : 41        : input  : 3.3-V LVTTL       :         :           : N              
+IN1[3]                       : 41        : input  : 3.3-V LVTTL       :         :           : N              
 GND                          : 42        : gnd    :                   :         :           :                
 GND+                         : 43        :        :                   :         :           :                
 GND+                         : 44        :        :                   :         :           :                
